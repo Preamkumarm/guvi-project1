@@ -1,0 +1,104 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('2_aasasq.jpg'); 
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 1s ease, pulsateBackground 10s infinite alternate; 
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#audio {
+  width: 20%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  background: none;
+  animation: pulse 1.5s infinite; 
+}
+
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+#audio::-webkit-media-controls-panel {
+  background-color: rgb(206, 30, 194);
+}
+
+#audio::-webkit-media-controls-play-button,
+#audio::-webkit-media-controls-pause-button {
+  color: #fff;
+}
+
+#audio::-webkit-media-controls-current-time-display,
+#audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+#audio::-webkit-media-controls-volume-slider {
+  background-color: blueviolet;
+}
+
+#lyrics {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: xx-large;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-left: 300px;
+  top: 30%;
+  animation: rotateIn 1s ease; 
+}
+
+
+@keyframes rotateIn {
+  from {
+      transform: rotate(-10deg);
+      opacity: 0;
+  }
+  to {
+      transform: rotate(0deg);
+      opacity: 1;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+
+@keyframes pulsateBackground {
+  0% {
+      background-size: 100%;
+  }
+  100% {
+      background-size: 110%; 
+  }
+}
